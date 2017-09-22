@@ -20,10 +20,24 @@
 		cursor: pointer;
 		transition: all 100ms ease;
 
+		a {
+			background: inherit;
+			display: inline-block;
+			font-size: 1.5em;
+			font-weight: bold;
+			height: auto;
+			line-height: 1;
+			margin-left: 5px;
+			vertical-align: middle;
+			width: auto;
+		}
+
 		&.selected {
-			background-color: #777;
-			border-color: #777;
-			color: #EEE;
+			&, a {
+				background-color: #777;
+				border-color: #777;
+				color: #EEE;
+			}
 		}
 
 		&.dupe {

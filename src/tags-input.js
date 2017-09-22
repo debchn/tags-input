@@ -26,11 +26,12 @@ export default function tagsInput(input) {
 	}
 
 	function getValue() {
-		return $('.tag', true)
-			.map( tag => tag.textContent )
-			.concat(base.input.value || [])
-			.join(SEPERATOR);
-	}
+        return $('.tag', true)
+            .map(tag => tag.getAttribute('data-tag'))
+            .concat(base.input.value || [])
+            .join(SEPERATOR);
+    }
+
 
 	function setValue(value) {
 		$('.tag', true).forEach( t => base.removeChild(t) );
@@ -63,10 +64,30 @@ export default function tagsInput(input) {
 		}
 
 		base.insertBefore(
-			createElement('span', 'tag', tag, { tag }),
+			createTagElement('tag', tag, { tag }),
 			base.input
 		);
 	}
+
+	function createTagElement(name, text, attributes) {
+		let el = document.createElement('span');
+		if (name) el.className = name;
+		if (text) el.textContent = text;
+		let removeBtn = document.createElement('a');
+		removeBtn.href = '#removeTag';
+		removeBtn.innerHTML = '&times;';
+		removeBtn.addEventListener('click', e => {
+			e.preventDefault();
+			base.removeChild(el);
+			setInputWidth();
+			save();
+		});
+		el.appendChild(removeBtn);
+		for (let key in attributes) {
+			el.setAttribute(`data-${key}`, attributes[key]);
+		}
+		return el;
+    }
 
 	function select(el) {
 		let sel = $('.selected');
