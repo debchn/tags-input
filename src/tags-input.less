@@ -1,5 +1,6 @@
 .tags-input {
-	display: inline-block;
+	display: inline-flex;
+	flex-wrap: wrap;
 	padding: 0 2px;
 	background: #FFF;
 	border: 1px solid #CCC;
@@ -9,6 +10,7 @@
 
 	.tag {
 		display: inline-block;
+		flex-shrink: 0;
 		background: #EEE;
 		color: #444;
 		padding: 0 4px;
@@ -52,6 +54,7 @@
 	input {
 		appearance: none !important;
 		display: inline-block !important;
+		flex-grow: 1;
 		padding: 3px;
 		margin: 0 !important;
 		background: none !important;
