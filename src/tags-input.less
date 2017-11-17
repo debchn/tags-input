@@ -20,16 +20,18 @@
 		cursor: pointer;
 		transition: all 100ms ease;
 
-		a {
-			background: inherit;
-			display: inline-block;
-			font-size: 1.5em;
+		button {
+			border: none;
+			padding: 0.2em;
+			background: transparent;
+			cursor: pointer;
+			font-size: 1em;
 			font-weight: bold;
-			height: auto;
-			line-height: 1;
-			margin-left: 5px;
-			vertical-align: middle;
-			width: auto;
+			color: grey;
+
+			&:hover, &:focus {
+				color: #000;
+			}
 		}
 
 		&.selected {

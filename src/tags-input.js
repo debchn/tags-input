@@ -73,16 +73,14 @@ export default function tagsInput(input) {
 		let el = document.createElement('span');
 		if (name) el.className = name;
 		if (text) el.textContent = text;
-		let removeBtn = document.createElement('a');
-		removeBtn.href = '#removeTag';
+		let removeBtn = document.createElement('button');
 		removeBtn.innerHTML = '&times;';
-		removeBtn.addEventListener('click', e => {
-			e.preventDefault();
+		removeBtn.addEventListener('click', () => {
 			base.removeChild(el);
 			setInputWidth();
 			save();
 		});
-		el.appendChild(removeBtn);
+		el.insertBefore(removeBtn, el.firstChild);
 		for (let key in attributes) {
 			el.setAttribute(`data-${key}`, attributes[key]);
 		}
