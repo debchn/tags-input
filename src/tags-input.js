@@ -75,7 +75,8 @@ export default function tagsInput(input) {
 		if (text) el.textContent = text;
 		let removeBtn = document.createElement('button');
 		removeBtn.innerHTML = '&times;';
-		removeBtn.addEventListener('click', () => {
+		removeBtn.addEventListener('click', e => {
+			e.preventDefault();
 			base.removeChild(el);
 			save();
 		});
