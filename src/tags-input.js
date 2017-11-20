@@ -75,6 +75,7 @@ export default function tagsInput(input) {
 		if (text) el.textContent = text;
 		let removeBtn = document.createElement('button');
 		removeBtn.innerHTML = '&times;';
+		removeBtn.setAttribute('aria-label', 'Remove');
 		removeBtn.addEventListener('click', e => {
 			e.preventDefault();
 			base.removeChild(el);
