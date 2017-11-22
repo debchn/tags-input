@@ -1,3 +1,5 @@
+import 'custom-event-polyfill';
+
 const BACKSPACE = 8,
 	TAB = 9,
 	ENTER = 13,
@@ -40,7 +42,7 @@ export default function tagsInput(input) {
 
 	function save() {
 		input.value = getValue();
-		input.dispatchEvent(new Event('change'));
+		input.dispatchEvent(new CustomEvent('change'));
 	}
 
 	// Return false if no need to add a tag
@@ -227,7 +229,7 @@ export default function tagsInput(input) {
 	// This means that users who only want one thing don't have to enter commas
 	base.input.addEventListener('input', () => {
 		input.value = getValue();
-		input.dispatchEvent(new Event('input'));
+		input.dispatchEvent(new CustomEvent('input'));
 	});
 
 	// One tick after pasting, parse pasted text as CSV:
