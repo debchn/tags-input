@@ -1,8 +1,8 @@
 {
-  "name": "tags-input",
-  "version": "1.1.1",
+  "name": "@debchn/tags-input",
+  "version": "1.2.0",
   "main": "tags-input.js",
-  "description": "<input type=\"tags\"> like magic.",
+  "description": "tags-input but with 'remove' buttons",
   "scripts": {
     "build": "npm run transpile && npm run less && npm run size",
     "transpile": "babel src --source-root src -s -d .",

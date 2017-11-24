@@ -1,27 +1,7 @@
-tags-input
-==========
+This is a fork of [tags-input](https://github.com/developit/tags-input)
+=======================================================================
 
-[![NPM Version](http://img.shields.io/npm/v/tags-input.svg?style=flat)](https://www.npmjs.org/package/tags-input)
-[![Bower Version](http://img.shields.io/bower/v/tags-input.svg?style=flat)](http://bower.io/search/?q=tags-input)
-[![Gitter Room](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/developit/tags-input)
-
-**Features:**
-
-- I said `<input type="tags">` should be a thing.
-- With full keyboard, mouse and focus support.
-- Works with HTML5 `pattern` and `placeholder` attributes, too!
-- Native [`change`](https://developer.mozilla.org/en-US/docs/Web/Events/change) and [`input`](https://developer.mozilla.org/en-US/docs/Web/Events/input) _("live" change)_ events.
-- Using [preact](https://github.com/developit/preact)? (or react?) There's a wrapper called [preact-token-input](https://github.com/developit/preact-token-input)
-- Works in modern browsers and IE10+
-
-**Screenshot:**
-
-> ![screenshot](http://cl.ly/image/3M3U1h1s2y0v/tags-screenshot.png)
-
-[JSFiddle Demo](http://jsfiddle.net/developit/d5w4jpxq/)
-
----
-
+It adds a "remove" button to the left side of each tag.
 
 Examples
 ========
